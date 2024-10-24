@@ -1,20 +1,13 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react'
 
 const Example = () => {
-  const [condition, setCondition] = useState(true);
-  if (condition) {
-    // won't work
-    const [state, setState] = useState(false);
-  }
+  // AND (&&) operator:
+  console.log(true && 'use this') // if first truthy, return second
+  console.log(false && `don't need`) // if first is false, stop there
 
-  // if (condition) {
-  //   return <h2>Hello There</h2>;
-  // }
-  // // this will also fail
-  // useEffect(() => {
-  //   console.log('hello there');
-  // }, []);
-  return <h2>example</h2>;
-};
+  // OR (||) operator:
+  console.log(false || 'use this') // if first falsy, return second
+  console.log(true || `don't need`) // if first true - stop there
+}
 
-export default Example;
+export default Example
